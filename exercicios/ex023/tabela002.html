@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabelas</title>
+</head>
+
+<style>
+  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  table{
+    width: 500px;
+    border-collapse: collapse;
+    position: relative;
+  }
+  
+  td,th{
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding:10px;
+    background-color: lightgray;
+  }
+
+  thead, tfoot{
+    background-color: gray;
+    color: white;
+  }
+
+ /* fixar barra ao deslizar a pagina */
+
+  thead > tr > th{
+    position: sticky;
+    top: -1px;
+    background-color: black;
+  }
+
+   /* EFEITO ZEBRADO 
+  No lugar do 2n -> odd = impar ou even = par
+  */
+
+  tbody > tr:nth-child(2n){
+    background-color: lightgray;
+  }
+
+  td.num{
+    text-align: right;
+  }
+  
+</style>
+
+<body>
+  <h1>Uso de tabelas grandes</h1>
+  <!--ANATOMIA DE TABELAS GRANDES
+  
+  TABLE
+    THEAD
+      TR (linha), TD (dado), TH (cabeçalho)
+    TBODY
+      TR, TD, TH
+    TFOOT
+      TR, TD, TH 
+      
+  ESCOPO
+  "col" resultado na coluna abaixo
+  "row" resultado vem na linha ao lado
+  -->
+
+  <table>
+    <caption>População dos Estados</caption>
+    <thead>
+      <tr>        
+        <th scope="col">Estado</th>
+        <th scope="col">População</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">40.000.000</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">30.000.000</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">20.000.000</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">15.000.000</td>
+      </tr>
+      <tr>
+        <td>Espirito Santo</td>
+        <td class="num">10.000.000</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th scope="row">Total de Habitantes</th>
+        <td class="num"><strong>115.000.000</strong></td>
+      </tr>
+    </tfoot>
+
+  </table>
+  
+</body>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis dolores autem quaerat, soluta aspernatur incidunt obcaecati consequuntur voluptate est quos accusamus amet cupiditate consectetur vitae quia! Delectus, eos illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque quis repellat voluptatum obcaecati possimus. Vel praesentium necessitatibus porro, accusamus voluptas laboriosam similique fugit, placeat, fuga quia animi! Laboriosam, omnis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate deleniti autem labore veritatis officiis quas exercitationem neque! Eius quae illo dignissimos corporis repellat dolore reprehenderit illum mollitia. Reiciendis, laudantium?</p>
+</html>
