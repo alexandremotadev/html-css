@@ -11,16 +11,20 @@
     }
   </style>
 
-/* Cadastro.php enviar dados pro php após clicar em enviar */
-
 </head>
 <body>
   <h1>Meu primeiro formulário</h1>
   
-  <form action="cadastro.php" autocomplete="off">
-    <p>Nome: <input type="text" name="nome" id="inome"></p>
+  <!--Cadastro.php enviar dados pro php após clicar em enviar-->
+  <!--Label relaciona o objeto do formulario, com a etiqueta dele (ex:nome com caixa onde digitei o nome)-->
+  <!--Métodos de envio de dados: GET e POST
+  GET = enviar dados não sensiveis (vão aparecer na URL) e até 3000bytes, não tem como mandar arquivos
+  POST = enviar dados sensiveis (não vão aparecer na URL) e mais do que 3000bytes, tem como usar arquivos-->
 
-    <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+  <form action="cadastro.php" method="GET" autocomplete="off">
+    <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+
+    <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
 
     <p><input type="submit" value="Enviar"></p>
   </form>
